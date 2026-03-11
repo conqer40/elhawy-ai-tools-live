@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Twitter, Instagram, Facebook } from 'lucide-react';
+import { Facebook } from 'lucide-react';
 
 export const Footer = () => {
     const { i18n } = useTranslation();
