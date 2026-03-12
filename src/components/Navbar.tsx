@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Bot, Globe } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
-import { DesignSwitcher } from './DesignSwitcher';
 
 export const Navbar = () => {
     const { t, i18n } = useTranslation();
