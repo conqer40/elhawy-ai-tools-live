@@ -11,8 +11,12 @@ export const Login = () => {
 
     const handleLogin = (e: React.FormEvent) => {
         e.preventDefault();
-        // Simulate auth success
-        navigate('/admin/dashboard');
+        // Check for specific user credentials
+        if (email === 'conqer40@gmail.com' && password === '01065584603') {
+            navigate('/admin/dashboard');
+        } else {
+            alert('Invalid Credentials! / بيانات الدخول غير صحيحة');
+        }
     };
 
     return (
@@ -35,7 +39,7 @@ export const Login = () => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             className="w-full bg-primary border border-color rounded-lg px-4 py-3 text-primary outline-none focus:border-[color:var(--accent-color)] transition-colors"
-                            placeholder="admin@elhawy.com"
+                            placeholder="conqer40@gmail.com"
                             dir="ltr"
                         />
                     </div>
@@ -48,7 +52,7 @@ export const Login = () => {
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             className="w-full bg-primary border border-color rounded-lg px-4 py-3 text-primary outline-none focus:border-[color:var(--accent-color)] transition-colors"
-                            placeholder="••••••••"
+                            placeholder="01065584603"
                             dir="ltr"
                         />
                     </div>

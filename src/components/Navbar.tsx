@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Bot, Globe } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+import { DesignSwitcher } from './DesignSwitcher';
 
 export const Navbar = () => {
     const { t, i18n } = useTranslation();
@@ -39,6 +40,8 @@ export const Navbar = () => {
 
                 {/* Actions */}
                 <div className="flex items-center gap-4">
+                    <DesignSwitcher />
+
                     <button onClick={toggleLanguage} className="btn-secondary flex items-center gap-2">
                         <Globe size={18} />
                         <span style={{ fontSize: '14px', paddingTop: '2px' }}>{i18n.language === 'ar' ? 'English' : 'العربية'}</span>
