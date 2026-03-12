@@ -1,111 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
-
 :root {
-  /* DARK NEON AI THEME (DEFAULT) */
+  /* DEFINITIVE NANO BANANA DARK THEME */
   --bg-main: #050505;
-  --bg-secondary: #0a0a0a;
-  --bg-card: #151515;
-  --border-color: #252525;
-  --border-glow: rgba(168, 85, 247, 0.2);
+  --bg-secondary: #0a0a09;
+  --bg-card: #0d0d0e;
+  --border-color: #1a1a1b;
+  --border-glow: rgba(250, 204, 21, 0.15);
   --text-primary: #ffffff;
   --text-secondary: #a1a1aa;
-  --text-muted: #71717a;
-  --accent-primary: #a855f7;
-  --accent-secondary: #e07a5f;
-  --glass-bg: rgba(5, 5, 5, 0.85);
-  --glass-border: rgba(255, 255, 255, 0.05);
-  --font-tajawal: 'Tajawal', sans-serif;
-  --gradient-main: linear-gradient(135deg, #4f46e5 0%, #a855f7 50%, #f97316 100%);
-  --gradient-btn: linear-gradient(90deg, #5a32fa 0%, #e07a5f 100%);
-  --accent-color: #a855f7;
-}
-
-body.theme-apple-clean {
-  --bg-main: #f8f9fb;
-  --bg-secondary: #ffffff;
-  --bg-card: #ffffff;
-  --border-color: #e5e7eb;
-  --border-glow: rgba(0, 0, 0, 0.05);
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
-  --text-muted: #9ca3af;
-  --accent-primary: #000000;
-  --accent-secondary: #333333;
-  --glass-bg: rgba(255, 255, 255, 0.8);
-  --glass-border: rgba(0, 0, 0, 0.1);
-  --gradient-main: linear-gradient(135deg, #000000 0%, #333333 100%);
-  --gradient-btn: linear-gradient(90deg, #000000 0%, #444444 100%);
-  --accent-color: #000000;
-}
-
-body.theme-stripe-cosmic {
-  --bg-main: #0a2540;
-  --bg-secondary: #0d2a4a;
-  --bg-card: #123456;
-  --border-color: #1a4a7a;
-  --border-glow: rgba(0, 209, 255, 0.2);
-  --text-primary: #ffffff;
-  --text-secondary: #adbdcc;
-  --text-muted: #7ca3c3;
-  --accent-primary: #635bff;
-  --accent-secondary: #00d1ff;
-  --glass-bg: rgba(10, 37, 64, 0.8);
-  --glass-border: rgba(255, 255, 255, 0.05);
-  --gradient-main: linear-gradient(135deg, #635bff 0%, #00d1ff 100%);
-  --gradient-btn: linear-gradient(90deg, #635bff 0%, #00d1ff 100%);
-  --accent-color: #635bff;
-}
-
-body.theme-nano-banana {
-  --bg-main: #050505;
-  --bg-secondary: #0a0a0a;
-  --bg-card: #151515;
-  --border-color: #252525;
-  --border-glow: rgba(250, 204, 21, 0.2);
-  --text-primary: #ffffff;
-  --text-secondary: #a1a1aa;
-  --accent-primary: #fac915;
-  --accent-secondary: #f59e0b;
   --accent-color: #fac915;
-  --gradient-main: linear-gradient(135deg, #fac915 0%, #f59e0b 100%);
-  --gradient-btn: linear-gradient(90deg, #fac915 0%, #f59e0b 100%);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
+  --accent-gradient: linear-gradient(135deg, #fac915 0%, #f59e0b 100%);
+  --font-tajawal: 'Tajawal', sans-serif;
 }
 
 body {
   font-family: var(--font-tajawal);
   background-color: var(--bg-main);
   color: var(--text-primary);
-  line-height: 1.5;
-  min-height: 100vh;
+  line-height: 1.6;
   overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
 }
 
-body[dir="rtl"] {
-  direction: rtl;
-  text-align: right;
-}
-
-body[dir="ltr"] {
-  direction: ltr;
-  text-align: left;
+.nav-glass {
+  background: rgba(5, 5, 5, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  z-index: 1000;
 }
 
 .layout-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
   padding: 0 24px;
   margin: 0 auto;
+}
+
+.nav-link {
+  color: #a1a1aa;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.3s;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.nav-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.btn-primary {
+  background: var(--accent-gradient);
+  color: #000;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 15px;
+  transition: all 0.3s;
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.2);
+}
+
+.btn-secondary {
+  background: #1a1a1b;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px solid #333;
 }
 
 /* Base Utility Classes */
