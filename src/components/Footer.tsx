@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Facebook } from 'lucide-react';
+import { Facebook, MessageCircle } from 'lucide-react';
 
 export const Footer = () => {
     const { i18n } = useTranslation();
@@ -10,53 +10,33 @@ export const Footer = () => {
             {/* Authentic aitoolsbot background pattern */}
             <img src="https://aitoolsbot.com/assets/front/img/footer-right.webp" alt="circuit" className="footer-1-shape" />
 
-            <div className="layout-container py-12 relative z-10 pt-16">
+            <div className="layout-container py-16 relative z-10 flex flex-col items-center justify-center">
 
-                {/* Main Footer Content */}
-                <div className={`flex flex-col md:flex-row justify-between items-start gap-12 ${isRTL ? 'md:flex-row-reverse' : ''}`}>
+                {/* Decorative Line Top */}
+                <div className="w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-[#8b62fb]/50 to-transparent mb-10"></div>
 
-                    {/* Section 1: Features (Right side in RTL) */}
-                    <div className="text-right flex-1" dir={isRTL ? "rtl" : "ltr"}>
-                        <h3 className="text-[#f97316] font-bold text-lg mb-6 tracking-tight">
-                            نوفر عليك ساعات طويلة عن طريق البحث السريع في موقعنا
-                        </h3>
-                        {/* Decorative line under title */}
-                        <div className="w-full max-w-md h-[2px] bg-[#111] rounded-full mt-8"></div>
-                    </div>
+                {/* Centered Content */}
+                <div className="flex flex-col items-center gap-8 text-center" dir={isRTL ? "rtl" : "ltr"}>
 
-                    {/* Section 2: Links (Middle) */}
-                    <div className="flex flex-col md:flex-row gap-16 text-right" dir={isRTL ? "rtl" : "ltr"}>
-
-                        <div className="flex flex-col gap-4">
-                            <h4 className="text-white font-bold text-lg mb-2">تواصل معي</h4>
-                            <a href="https://wa.me/201022104948" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm">التواصل عبر واتساب</a>
-                            <a href="https://www.facebook.com/MohamedElhawy0" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm">فيسبوك</a>
-                        </div>
-
-                        <div className="flex flex-col gap-4">
-                            <h4 className="text-white font-bold text-lg mb-2">القوانين</h4>
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">سياسة الخصوصية</a>
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">الشروط والأحكام</a>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                {/* Bottom Bar: Copyright & Socials */}
-                <div className={`mt-16 pt-6 border-t border-[#1a1a24] flex flex-col md:flex-row items-center justify-between gap-6 ${isRTL ? 'md:flex-row-reverse' : ''}`} dir={isRTL ? "rtl" : "ltr"}>
-
-                    <p className="text-gray-500 text-sm font-medium">
+                    <h3 className="text-gray-200 text-2xl font-bold tracking-wide">
                         جميع الحقوق محفوظة لـ Mohamed Elhawy
-                    </p>
+                    </h3>
 
-                    <div className="flex items-center gap-6">
-                        <a href="https://www.facebook.com/MohamedElhawy0" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors flex items-center gap-2 text-sm">
-                            Facebook <Facebook size={16} />
+                    <div className="flex flex-wrap items-center justify-center gap-8">
+                        <a href="https://wa.me/201022104948" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-6 py-3 rounded-full bg-[#1a1c23] border border-[#2a2d36] text-gray-400 hover:text-[#25D366] hover:border-[#25D366]/50 transition-all duration-300 text-sm font-medium shadow-sm hover:shadow-[0_0_15px_rgba(37,211,102,0.2)]">
+                            <MessageCircle size={20} />
+                            <span>التواصل عبر واتساب (+201022104948)</span>
+                        </a>
+
+                        <a href="https://www.facebook.com/MohamedElhawy0" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-6 py-3 rounded-full bg-[#1a1c23] border border-[#2a2d36] text-gray-400 hover:text-[#1877F2] hover:border-[#1877F2]/50 transition-all duration-300 text-sm font-medium shadow-sm hover:shadow-[0_0_15px_rgba(24,119,242,0.2)]">
+                            <Facebook size={20} />
+                            <span>الصفحة الرسمية على فيسبوك</span>
                         </a>
                     </div>
-
                 </div>
+
+                {/* Decorative Line Bottom */}
+                <div className="w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-[#00b8d9]/50 to-transparent mt-10"></div>
 
             </div>
         </footer>
